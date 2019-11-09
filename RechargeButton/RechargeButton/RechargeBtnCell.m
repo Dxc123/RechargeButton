@@ -16,8 +16,8 @@
     self = [super initWithFrame:frame];
     if (self) {
 //        self.contentView.backgroundColor = [UIColor whiteColor];
-        self.layer.borderWidth = 2;
-        self.layer.borderColor = [UIColor redColor].CGColor;
+        self.layer.borderWidth = 1;
+        self.layer.borderColor = [UIColor grayColor].CGColor;
         self.layer.cornerRadius = 6.0f;
         self.layer.masksToBounds = YES;
         
@@ -73,10 +73,17 @@
     _sublableText = sublableText;
     self.sublable.text = sublableText;
 }
-//- (void)prepareForReuse{
-//    [super prepareForReuse];
-//    _lable.frame = self.contentView.frame;
-//    _lable.textColor = [UIColor blackColor];
-//}
+- (void)setSelected:(BOOL)selected{
+    if (selected) {
+        self.layer.borderColor = [UIColor redColor].CGColor;
+        self.lable.textColor = [UIColor redColor];
+        self.sublable.textColor = [UIColor redColor];
+    }
+    else{
+       self.layer.borderColor = [UIColor grayColor].CGColor;
+        self.lable.textColor = [UIColor grayColor];
+        self.sublable.textColor = [UIColor grayColor];
+    }
+}
 
 @end

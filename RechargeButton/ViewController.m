@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "RechargeView.h"
-#import "RechargeBtnCell.h"
+
 #import "Masonry.h"
 @interface ViewController ()
 <BtnCollectionViewDelegate>
@@ -33,7 +33,7 @@
     _rechargeView.celltitles = @[@"60", @"300", @"680", @"1280", @"3280", @"6480",@"12480",@"25980"];
     _rechargeView.cellsubtitles = @[@"6", @"30", @"68", @"128", @"328", @"648",@"1248",@"2598"];
     _rechargeView.delegate = self;
-    
+    _rechargeView.selectIndex  = @"0";
     _rechargeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:_rechargeBtn];
     _rechargeBtn.layer.cornerRadius = 3.0;

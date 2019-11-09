@@ -64,11 +64,19 @@
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     RechargeBtnCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"RechargeBtnCell" forIndexPath:indexPath];
-//    if (indexPath.row == 0) {
-//    cell.selectedImg.image = IMAGE(@"sign_singed");;
-//    }
+
     cell.lableText = [NSString stringWithFormat:@"%@金币",_celltitles[indexPath.row]];
     cell.sublableText = [NSString stringWithFormat:@"￥%@",_cellsubtitles[indexPath.row]];
+    
+    //    默认选中第一个
+    if (StrIsEmpty(self.selectIndex)) {
+         [collectionView selectItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionNone];
+
+        
+    }else{
+         [collectionView selectItemAtIndexPath:[NSIndexPath indexPathForItem:[self.selectIndex integerValue] inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionNone];
+       
+    }
    
     return cell;
     
