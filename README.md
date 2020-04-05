@@ -3,6 +3,7 @@
  ///使用：
  
    ///选择充值数额
+   
     _rechargeView = [[RechargeCollectionView alloc] initWithFrame:CGRectMake(0, 200,self.view.frame.size.width, 400)];
     [self.view addSubview:_rechargeView];
     
