@@ -13,8 +13,7 @@
 		C0B3A74B20A7EDD7006F0B1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0B3A74A20A7EDD7006F0B1E /* Assets.xcassets */; };
 		C0B3A74E20A7EDD7006F0B1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0B3A74C20A7EDD7006F0B1E /* LaunchScreen.storyboard */; };
 		C0B3A75120A7EDD7006F0B1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B3A75020A7EDD7006F0B1E /* main.m */; };
-		C0B3A75B20A7EE14006F0B1E /* RechargeBtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B3A75720A7EE14006F0B1E /* RechargeBtnCell.m */; };
-		C0B3A75C20A7EE14006F0B1E /* RechargeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B3A75A20A7EE14006F0B1E /* RechargeView.m */; };
+		C0B3A75C20A7EE14006F0B1E /* RechargeCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B3A75A20A7EE14006F0B1E /* RechargeCollectionView.m */; };
 		C0B3A77820A7F02B006F0B1E /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B3A75F20A7F02B006F0B1E /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		C0B3A77920A7F02B006F0B1E /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B3A76820A7F02B006F0B1E /* ViewController+MASAdditions.m */; };
 		C0B3A77A20A7F02B006F0B1E /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B3A76C20A7F02B006F0B1E /* MASCompositeConstraint.m */; };
@@ -38,10 +37,8 @@
 		C0B3A74D20A7EDD7006F0B1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0B3A74F20A7EDD7006F0B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0B3A75020A7EDD7006F0B1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C0B3A75720A7EE14006F0B1E /* RechargeBtnCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeBtnCell.m; sourceTree = "<group>"; };
-		C0B3A75820A7EE14006F0B1E /* RechargeBtnCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeBtnCell.h; sourceTree = "<group>"; };
-		C0B3A75920A7EE14006F0B1E /* RechargeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeView.h; sourceTree = "<group>"; };
-		C0B3A75A20A7EE14006F0B1E /* RechargeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeView.m; sourceTree = "<group>"; };
+		C0B3A75920A7EE14006F0B1E /* RechargeCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeCollectionView.h; sourceTree = "<group>"; };
+		C0B3A75A20A7EE14006F0B1E /* RechargeCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeCollectionView.m; sourceTree = "<group>"; };
 		C0B3A75E20A7F02B006F0B1E /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		C0B3A75F20A7F02B006F0B1E /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		C0B3A76020A7F02B006F0B1E /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -83,10 +80,8 @@
 		C00B4C3F23766ADD00D9057B /* RechargeButton */ = {
 			isa = PBXGroup;
 			children = (
-				C0B3A75920A7EE14006F0B1E /* RechargeView.h */,
-				C0B3A75A20A7EE14006F0B1E /* RechargeView.m */,
-				C0B3A75820A7EE14006F0B1E /* RechargeBtnCell.h */,
-				C0B3A75720A7EE14006F0B1E /* RechargeBtnCell.m */,
+				C0B3A75920A7EE14006F0B1E /* RechargeCollectionView.h */,
+				C0B3A75A20A7EE14006F0B1E /* RechargeCollectionView.m */,
 			);
 			path = RechargeButton;
 			sourceTree = "<group>";
@@ -228,9 +223,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0B3A74620A7EDD3006F0B1E /* ViewController.m in Sources */,
-				C0B3A75C20A7EE14006F0B1E /* RechargeView.m in Sources */,
+				C0B3A75C20A7EE14006F0B1E /* RechargeCollectionView.m in Sources */,
 				C0B3A77C20A7F02B006F0B1E /* MASLayoutConstraint.m in Sources */,
-				C0B3A75B20A7EE14006F0B1E /* RechargeBtnCell.m in Sources */,
 				C0B3A75120A7EDD7006F0B1E /* main.m in Sources */,
 				C0B3A78120A7F02B006F0B1E /* MASViewAttribute.m in Sources */,
 				C0B3A77D20A7F02B006F0B1E /* NSArray+MASAdditions.m in Sources */,
