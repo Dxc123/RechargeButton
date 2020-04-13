@@ -26,9 +26,11 @@
 /**
 选中的index(默认选中第一个)
 */
-@property(nonatomic,assign)NSString *selectIndex;
+@property(nonatomic,copy)NSString *selectIndex;
 @property(nonatomic,assign)id<BtnCollectionViewDelegate>delegate;
+//选择Block
 @property(nonatomic,copy)void(^SelectBlock)(NSInteger index);
+//充值按钮Block
 @property(nonatomic,copy)void(^RechargeBlock)(NSInteger index);
 @end
 
